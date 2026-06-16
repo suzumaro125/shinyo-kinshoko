@@ -1,56 +1,80 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>神妖黙示録の禁書庫</title>
 
 <style>
+
 body{
-margin:0;
-background:#09060f;
-color:#eee;
-font-family:sans-serif;
+    margin:0;
+    background:#0a0a12;
+    color:white;
+    font-family:sans-serif;
 }
 
 header{
-padding:20px;
-text-align:center;
-background:#120b20;
-border-bottom:2px solid #7b4cff;
+    text-align:center;
+    padding:20px;
+    background:#111827;
+    border-bottom:2px solid #7c3aed;
 }
 
 h1{
-margin:0;
-color:#cdb7ff;
+    margin:0;
+    color:#d8b4fe;
+}
+
+.sub{
+    color:#9ca3af;
+    margin-top:5px;
+}
+
+.banner{
+    width:100%;
+    max-height:300px;
+    object-fit:cover;
 }
 
 .container{
-padding:15px;
+    padding:15px;
 }
 
 .card{
-background:#120b20;
-border:1px solid #7b4cff;
-border-radius:12px;
-padding:15px;
-margin-bottom:15px;
+    background:#161b22;
+    border:1px solid #30363d;
+    border-radius:12px;
+    margin-bottom:15px;
+    overflow:hidden;
 }
 
-button{
-width:100%;
-padding:12px;
-margin-top:10px;
-background:#2a184d;
-color:white;
-border:none;
-border-radius:10px;
-font-size:16px;
+.card button{
+    width:100%;
+    background:#1f2937;
+    color:white;
+    border:none;
+    padding:15px;
+    font-size:18px;
+    text-align:left;
 }
 
-.hidden{
-display:none;
+.content{
+    display:none;
+    padding:15px;
 }
+
+.content p{
+    line-height:1.8;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    color:#888;
+}
+
 </style>
 </head>
 
@@ -58,115 +82,102 @@ display:none;
 
 <header>
 <h1>神妖黙示録の禁書庫</h1>
-<p>ルールブック閲覧アプリ</p>
+<div class="sub">
+クトゥルフ神話TRPG オリジナルサプリメント
+</div>
 </header>
 
 <div class="container">
 
 <div class="card">
-<h2>目次</h2>
-
-<button onclick="showChapter('c1')">
-第一章 世界観
+<button onclick="toggle(this)">
+📖 ルールブック
 </button>
-
-<button>
-第二章 基本ルール
-</button>
-
-<button>
-第三章 キャラクター作成
-</button>
-
-<button>
-第四章 戦闘ルール
-</button>
-
-<button>
-第五章 成長
-</button>
-
-<button>
-第六章 魔術
-</button>
-
-<button>
-第七章 カルマ
-</button>
-
-<button>
-第八章 GM用ガイド
-</button>
-
+<div class="content">
+<p>
+神妖黙示録の基本ルールをまとめるページ。
+</p>
+</div>
 </div>
 
-<div id="c1" class="card hidden">
-
-<h2>第一章 世界観</h2>
-
+<div class="card">
+<button onclick="toggle(this)">
+⚔️ 戦闘ルール
+</button>
+<div class="content">
 <p>
-神妖黙示録の世界には、
-神話生物や怪異が存在する。
+神心技システム、運命力システム、
+属性戦闘ルールなどを掲載。
 </p>
+</div>
+</div>
 
+<div class="card">
+<button onclick="toggle(this)">
+🧙 魔術一覧
+</button>
+<div class="content">
 <p>
-それらは都市伝説や噂話として
-語られるだけではない。
+炎・氷・雷・影・龍・星の
+各属性魔術データベース。
 </p>
+</div>
+</div>
 
+<div class="card">
+<button onclick="toggle(this)">
+😈 神妖図鑑
+</button>
+<div class="content">
 <p>
-警察内部には怪異事件を専門に扱う部署が存在し、
-一部の組織は神話生物への対抗手段を研究している。
+神話生物や妖怪データを掲載。
 </p>
+</div>
+</div>
 
+<div class="card">
+<button onclick="toggle(this)">
+👤 キャラクター作成
+</button>
+<div class="content">
 <p>
-怪異は遠い世界の話ではない。
+探索者作成ルール。
 </p>
+</div>
+</div>
 
+<div class="card">
+<button onclick="toggle(this)">
+🎲 GMガイド
+</button>
+<div class="content">
 <p>
-人々の隣で息を潜め、
-ときに牙を剥く。
+GM向けルール・裁定集。
 </p>
-
-<p>
-そして貴方もまた、
-そんな怪異によって引き起こされる数々の事件へ
-巻き込まれていく。
-</p>
-
-<p>
-だが、貴方はただの人間ではない。
-</p>
-
-<p>
-加護。<br>
-呪い。<br>
-運命。<br>
-異能。
-</p>
-
-<p>
-あるいは――<br>
-世界の深層に存在する力が、
-貴方の身体に宿っている。
-</p>
-
-<p>
-「その力で、君は何を成す？」
-</p>
-
+</div>
 </div>
 
 </div>
+
+<footer>
+神妖黙示録の禁書庫 Ver1.0
+</footer>
 
 <script>
-function showChapter(id){
 
-document.querySelectorAll(".hidden")
-.forEach(e=>e.style.display="none");
+function toggle(button){
 
-document.getElementById(id).style.display="block";
+const content =
+button.nextElementSibling;
+
+if(content.style.display==="block"){
+content.style.display="none";
+}else{
+content.style.display="block";
 }
+
+}
+
 </script>
 
 </body>
