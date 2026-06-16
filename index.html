@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>神妖黙示録の禁書庫</title>
+
+<style>
+body{
+margin:0;
+background:#09060f;
+color:#eee;
+font-family:sans-serif;
+}
+
+header{
+padding:20px;
+text-align:center;
+background:#120b20;
+border-bottom:2px solid #7b4cff;
+}
+
+h1{
+margin:0;
+color:#cdb7ff;
+}
+
+.container{
+padding:15px;
+}
+
+.card{
+background:#120b20;
+border:1px solid #7b4cff;
+border-radius:12px;
+padding:15px;
+margin-bottom:15px;
+}
+
+button{
+width:100%;
+padding:12px;
+margin-top:10px;
+background:#2a184d;
+color:white;
+border:none;
+border-radius:10px;
+font-size:16px;
+}
+
+.hidden{
+display:none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>神妖黙示録の禁書庫</h1>
+<p>ルールブック閲覧アプリ</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>目次</h2>
+
+<button onclick="showChapter('c1')">
+第一章 世界観
+</button>
+
+<button>
+第二章 基本ルール
+</button>
+
+<button>
+第三章 キャラクター作成
+</button>
+
+<button>
+第四章 戦闘ルール
+</button>
+
+<button>
+第五章 成長
+</button>
+
+<button>
+第六章 魔術
+</button>
+
+<button>
+第七章 カルマ
+</button>
+
+<button>
+第八章 GM用ガイド
+</button>
+
+</div>
+
+<div id="c1" class="card hidden">
+
+<h2>第一章 世界観</h2>
+
+<p>
+神妖黙示録の世界には、
+神話生物や怪異が存在する。
+</p>
+
+<p>
+それらは都市伝説や噂話として
+語られるだけではない。
+</p>
+
+<p>
+警察内部には怪異事件を専門に扱う部署が存在し、
+一部の組織は神話生物への対抗手段を研究している。
+</p>
+
+<p>
+怪異は遠い世界の話ではない。
+</p>
+
+<p>
+人々の隣で息を潜め、
+ときに牙を剥く。
+</p>
+
+<p>
+そして貴方もまた、
+そんな怪異によって引き起こされる数々の事件へ
+巻き込まれていく。
+</p>
+
+<p>
+だが、貴方はただの人間ではない。
+</p>
+
+<p>
+加護。<br>
+呪い。<br>
+運命。<br>
+異能。
+</p>
+
+<p>
+あるいは――<br>
+世界の深層に存在する力が、
+貴方の身体に宿っている。
+</p>
+
+<p>
+「その力で、君は何を成す？」
+</p>
+
+</div>
+
+</div>
+
+<script>
+function showChapter(id){
+
+document.querySelectorAll(".hidden")
+.forEach(e=>e.style.display="none");
+
+document.getElementById(id).style.display="block";
+}
+</script>
+
+</body>
+</html>
